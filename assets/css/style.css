@@ -1,0 +1,8 @@
+body{
+	background-image:url("../images/spiderman_bg.jpg");
+	font-family: 'Indie Flower', cursive;
+	font-size:25px;
+	position:absolute;
+	right:2em;
+	/*position-anchor:50% 50%;*/
+}
