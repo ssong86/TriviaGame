@@ -6,3 +6,15 @@ body{
 	right:2em;
 	/*position-anchor:50% 50%;*/
 }
+
+.text-center{
+	text-align:center;
+	color:white;
+}
+
+.container{
+	width:750px;
+	height:500px;
+	background:#8b0000;
+
+}
