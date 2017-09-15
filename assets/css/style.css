@@ -1,6 +1,6 @@
 body{
 	background-image:url("../images/spiderman_bg.jpg");
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Bangers', cursive;
 	font-size:25px;
 	position:absolute;
 	right:2em;
@@ -16,5 +16,18 @@ body{
 	width:750px;
 	height:500px;
 	background:#8b0000;
+	text-align:center;
+}
 
+.btn-primary,.reset{
+	background-color: #313477;
+	color:white;
+	font-family: 'Bangers', cursive;
+	font-size:30px;
+
+}
+
+
+#gif{
+	margin: 30px;
 }

@@ -14,9 +14,13 @@ var triviaQuestions=[{
 		question: "Where is Spiderman's hometown?",
 		answerList: ["Brooklyn", "Queens", "Manhattan", "San Francisco"],
 		answer: 1
+	},{
+		question: "Who is not Spiderman's girlfriend?",
+		answerList: ["Mary Jane Watson", "Gwen Stacy", "Betty Brant", "Marilyn Woolf"],
+		answer: 4
 }];
 
-var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
+//var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
 var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var messages = {
 	correct: "CORRECT! You are a spidey guy.",
@@ -97,15 +101,17 @@ function answerPage(){
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
-	$('#gif').html('<img src = "assets/images/'+ gifArray[currentQuestion] +'.gif" width = "400px">');
+	
 	//checks to see correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
 		correctAnswer++;
 		$('#message').html(messages.correct);
+		$('#gif').html('<img src = "assets/images/spidey.gif" width = "400px">');
 	} else if((userSelect != rightAnswerIndex) && (answered == true)){
 		incorrectAnswer++;
 		$('#message').html(messages.incorrect);
 		$('#correctedAnswer').html('The correct answer was: ' + rightAnswerText);
+		$('#gif').html('<img src = "assets/images/ant.gif" width = "400px">');
 	} else{
 		unanswered++;
 		$('#message').html(messages.endTime);
